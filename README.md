@@ -6,7 +6,7 @@ This repo contains a GitHub Action that fetches your latest Strava stats and gen
 
 ## Example
 
-![Strava](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/hsimpson270/strava-badge/main/strava.json&logo=strava&cacheSeconds=86400)
+![Strava](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/hsimpson270/strava-badge/main/strava.json&logo=strava)
 
 To view it in action, [check out my profile](https://github.com/hsimpson270)!
 
