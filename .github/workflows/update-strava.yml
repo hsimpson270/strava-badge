@@ -1,0 +1,32 @@
+name: Update Strava Badge
+
+on:
+  schedule:
+    - cron: "0 0 */1 * *" # Runs every day at midnight UTC
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  update-strava:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Bash
+        run: chmod +x scripts/fetch-strava.sh
+
+      - name: Fetch Strava Stats
+        env:
+          STRAVA_ATHLETE_ID: ${{ secrets.STRAVA_ATHLETE_ID }}
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        run: ./scripts/fetch-strava.sh
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add strava.json
+          git commit -m "Updated Strava stats" || exit 0
+          git push
