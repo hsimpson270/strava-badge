@@ -4,7 +4,7 @@
 
 This repo contains a GitHub Action that fetches your latest Strava stats and generates a [Shields.io](https://shields.io/) badge that you can add to your Github profile README. The stats update automatically once each day.
 
-## Examples
+## Example
 
 ![Strava](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/hsimpson270/hsimpson270/main/strava.json&logo=strava&cacheSeconds=86400)
 
@@ -12,11 +12,11 @@ To view it in action, [check out my profile](https://github.com/hsimpson270)!
 
 ## Setup Instructions
 
-### 1️⃣ Fork This Repo
+### 1️⃣ &nbsp;Fork This Repo
 
 Click the **"Fork"** button to create your own copy of this repository.
 
-### 2️⃣ Get Your Strava API Credentials
+### 2️⃣ &nbsp;Get Your Strava API Credentials
 
 1. Make sure you are logged in to your Strava account and navigate to [Strava API Settings](https://www.strava.com/settings/api).
 2. Create a new app. The values to enter into the fields are as follows:
@@ -35,7 +35,7 @@ NOTE: The only required value here to make this work is `Authorization Callback 
 
 4. Navigate to your profile to get your **Athlete ID**. You will be able to copy this from the URL. Example: https://www.strava.com/athletes/YOUR_ID
 
-### 3️⃣ Add Secrets to GitHub
+### 3️⃣ &nbsp;Add Secrets to GitHub
 
 1. In your forked repo, navigate to **Settings** → **Secrets and variables** → **Actions**.
 2. Click **New Repository Secret** and add the following:
@@ -44,13 +44,13 @@ NOTE: The only required value here to make this work is `Authorization Callback 
    - `STRAVA_CLIENT_SECRET`
    - `STRAVA_REFRESH_TOKEN`
 
-### 4️⃣ Enable GitHub Actions
+### 4️⃣ &nbsp;Enable GitHub Actions
 
 1. Go to the **Actions** → **General** tab in your repo.
 2. Select **Allow strava-badge actions and reusable workflows**.
 3. Under **Workflow Permissions**, ensure **Read and write permissions** is selected.
 
-### 5️⃣ Add the Badge to Your README
+### 5️⃣ &nbsp;Add the Badge to Your README
 
 Navigate to your `README.md` file and add the following code. Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username:
 
