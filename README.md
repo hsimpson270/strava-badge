@@ -46,7 +46,7 @@ NOTE: The only required value here to make this work is `Authorization Callback 
 
 ### 4️⃣ &nbsp;Enable GitHub Actions
 
-1. Go to the **Actions** → **General** tab in your repo.
+1. Still within the **Settings** page, navigate to the **Actions** → **General** tab.
 2. Select **Allow {YOUR_USERNAME}, and select non-{YOUR_USERNAME}, actions and reusable workflows**.
 3. Check **Allow actions created by GitHub**.
 4. Under **Workflow Permissions**, ensure **Read and write permissions** is selected.
@@ -54,11 +54,11 @@ NOTE: The only required value here to make this work is `Authorization Callback 
 
 ### 5️⃣ &nbsp;Kick Off Your First Workflow
 
-Navigate to **Actions** and then **Update Strava Badge** → **Run workflow**. If successful, you should see a newly generated `strava.json` file in the root of your repo.
+Navigate to the **Actions** tab within the repo (not within **Settings**) and then to **Update Strava Badge** → **Run workflow**. Once the workflow has ran, if it is successful, you should see a newly generated `strava.json` file in the root of your repo.
 
 ### 6️⃣ &nbsp;Add the Badge to Your README
 
-Navigate to your `README.md` file and add the following code. Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username:
+Navigate to your `README.md` file and add the following code, replacing `YOUR_GITHUB_USERNAME` with your GitHub username:
 
 ```markdown
 ![Strava](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/strava-badge/main/strava.json&logo=strava)
@@ -149,7 +149,7 @@ By default, this badge will show your running distance, but Strava supports a nu
 }
 ```
 
-NOTE: As of the time of this writing (2-25-25), there is an ongoing issue with the Strava API where some `all_BLANK_totals` may not return their correct values. That is why this repo defaults to `ytd_run_totals`.
+NOTE: As of the time of this writing (2-25-25), there is an ongoing issue with the Strava API where some `all_{ACTIVITY}_totals` may not return their correct values. That is why this repo defaults to `ytd_run_totals`.
 
 ### Units
 
