@@ -6,7 +6,7 @@ This repo contains a GitHub Action that fetches your latest Strava stats and gen
 
 ## Example
 
-![Strava](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/hsimpson270/hsimpson270/main/strava.json&logo=strava&cacheSeconds=86400)
+![Strava](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/hsimpson270/strava-badge/main/strava.json&logo=strava&cacheSeconds=86400)
 
 To view it in action, [check out my profile](https://github.com/hsimpson270)!
 
@@ -47,10 +47,16 @@ NOTE: The only required value here to make this work is `Authorization Callback 
 ### 4️⃣ &nbsp;Enable GitHub Actions
 
 1. Go to the **Actions** → **General** tab in your repo.
-2. Select **Allow strava-badge actions and reusable workflows**.
-3. Under **Workflow Permissions**, ensure **Read and write permissions** is selected.
+2. Select **Allow {YOUR_USERNAME}, and select non-{YOUR_USERNAME}, actions and reusable workflows**.
+3. Check **Allow actions created by GitHub**.
+4. Under **Workflow Permissions**, ensure **Read and write permissions** is selected.
+5. Make sure everything is saved.
 
-### 5️⃣ &nbsp;Add the Badge to Your README
+### 5️⃣ &nbsp;Kick off your first workflow
+
+Navigate to **Actions** and then **Update Strava Badge** → **Run workflow**. If successful, you should see a newly generated `strava.json` file in the root of your repo.
+
+### 6️⃣ &nbsp;Add the Badge to Your README
 
 Navigate to your `README.md` file and add the following code. Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username:
 
@@ -152,7 +158,3 @@ Prefer kilometers instead of miles? Navigate to `scripts/fetch-strava.sh` and up
 ### Update Frequency
 
 To update how often the action fetches new data from Strava, update the schedule within `.github/workflows/update-strava.yml` to your desired interval. By default, it will update once every day.
-
-## Manual Update (Optional)
-
-If you want to update stats manually, go to **Actions** → **Update Strava Badge** → **Run workflow**.
