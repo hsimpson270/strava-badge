@@ -52,7 +52,7 @@ NOTE: The only required value here to make this work is `Authorization Callback 
 4. Under **Workflow Permissions**, ensure **Read and write permissions** is selected.
 5. Make sure everything is saved.
 
-### 5️⃣ &nbsp;Kick off your first workflow
+### 5️⃣ &nbsp;Kick Off Your First Workflow
 
 Navigate to **Actions** and then **Update Strava Badge** → **Run workflow**. If successful, you should see a newly generated `strava.json` file in the root of your repo.
 
@@ -61,7 +61,7 @@ Navigate to **Actions** and then **Update Strava Badge** → **Run workflow**. I
 Navigate to your `README.md` file and add the following code. Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username:
 
 ```markdown
-![Strava](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/strava-badge/main/strava.json&logo=strava&cacheSeconds=86400)
+![Strava](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/strava-badge/main/strava.json&logo=strava)
 ```
 
 ## Customization
